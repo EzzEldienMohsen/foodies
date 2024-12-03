@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './page.module.css';
+import ImagePicker from '@/components/meals/ImagePicker';
 const Share = () => {
   return (
     <>
@@ -38,7 +39,7 @@ const Share = () => {
               required
             ></textarea>
           </p>
-          IMAGE PICKER
+          <ImagePicker />
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>
@@ -46,6 +47,6 @@ const Share = () => {
       </main>
     </>
   );
-}
+};
 
 export default Share;
