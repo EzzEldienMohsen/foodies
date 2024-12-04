@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "db": "node initdb.js",
+    "postinstall": "node initdb.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
