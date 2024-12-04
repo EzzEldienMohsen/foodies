@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "node initdb.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
