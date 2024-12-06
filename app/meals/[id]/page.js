@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './page.module.css';
-import Image from 'next/image';
 import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
+import ImageGuard from '@/components/images/ImageGuard';
 
 const SingleMeal = ({ params }) => {
   const { id } = params;
@@ -15,7 +15,7 @@ const SingleMeal = ({ params }) => {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image src={meal.image} alt={meal.title} fill />
+          <ImageGuard image={meal.image} title={meal.title} />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>

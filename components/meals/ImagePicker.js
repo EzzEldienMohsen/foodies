@@ -16,11 +16,9 @@ const ImagePicker = ({ label, name }) => {
     }
     const fileReader = new FileReader();
     fileReader.onload = () => {
-      console.log(fileReader.result);
       setPickedImage(fileReader.result);
     };
     fileReader.readAsDataURL(file);
-    console.log(pickedImage);
   };
   return (
     <div className={classes.picker}>
