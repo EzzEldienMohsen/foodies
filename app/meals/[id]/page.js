@@ -4,6 +4,17 @@ import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
 import ImageGuard from '@/components/images/ImageGuard';
 
+export const generateMetaDate = async ({ params }) => {
+  const { id } = params;
+  const meal = getMeal(id);
+  if (!meal) {
+    notFound();
+  }
+  return {
+    title: meal.title,
+    description: meal.summery,
+  };
+};
 const SingleMeal = ({ params }) => {
   const { id } = params;
   const meal = getMeal(id);
