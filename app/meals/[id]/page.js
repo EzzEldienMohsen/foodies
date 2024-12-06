@@ -15,7 +15,10 @@ const SingleMeal = ({ params }) => {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <ImageGuard image={meal.image} title={meal.title} />
+          <ImageGuard
+            image={`https://ezz-foodies-bucket.s3.eu-north-1.amazonaws.com/images/${meal.image}`}
+            title={meal.title}
+          />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>

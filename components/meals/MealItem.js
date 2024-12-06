@@ -7,7 +7,10 @@ const MealItem = ({ title, slug, image, summary, creator }) => {
     <article className={classes.meal}>
       <header>
         <div className={classes.image}>
-          <ImageGuard image={image} title={title} />
+          <ImageGuard
+            image={`https://ezz-foodies-bucket.s3.eu-north-1.amazonaws.com/images/${image}`}
+            title={title}
+          />
         </div>
         <div className={classes.headerText}>
           <h2>{title}</h2>

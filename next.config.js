@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ezz-foodies-bucket.s3.eu-north-1.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+};
+module.exports = nextConfig;
