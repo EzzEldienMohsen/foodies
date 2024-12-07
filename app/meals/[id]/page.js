@@ -4,7 +4,7 @@ import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
 import ImageGuard from '@/components/images/ImageGuard';
 
-export const generateMetaDate = async ({ params }) => {
+export const generateMetadate = async ({ params }) => {
   const { id } = params;
   const meal = getMeal(id);
   if (!meal) {
